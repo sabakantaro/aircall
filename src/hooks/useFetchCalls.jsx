@@ -11,7 +11,10 @@ const useFetchCalls = () => {
       try {
         fetch(`${process.env.BASE_URL}/activities`)
           .then((response) => response.json())
-          .then((data) => setCalls(data));
+          .then((data) => {
+            setCalls(data);
+            console.log('fetchData', data);
+          });
       } catch (error) {
         setError(error);
       } finally {

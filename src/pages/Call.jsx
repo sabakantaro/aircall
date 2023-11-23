@@ -17,7 +17,10 @@ const Call = () => {
           }
         })
           .then((response) => response.json())
-          .then((data) => setCall(data));
+          .then((data) => {
+            console.log('fetchCall', data);
+            setCall(data);
+          });
     }
     catch (error) {
       console.error(error);

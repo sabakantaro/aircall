@@ -49,7 +49,7 @@ const Home = () => {
           }),
         })
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) => console.log('handleArchiveAllCall', data));
       }
       );
     }

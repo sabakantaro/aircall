@@ -36,7 +36,6 @@ const Archived = () => {
 
   const handleResetArchivedCall = () => {
     try {
-      callsExceptArchived.forEach((call) => {
         fetch(`${process.env.BASE_URL}/reset`, {
           method: 'PATCH',
           headers: {
@@ -44,8 +43,9 @@ const Archived = () => {
           }
         })
           .then((response) => response.json())
-          .then((data) => console.log(data));
-      });
+          .then((data) => {
+            console.log('handleResetArchivedCall', data);
+          });
     }
     catch (error) {
       console.error(error);
