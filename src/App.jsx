@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Header from './Header.jsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home.jsx';
+import Archived from './pages/Archived.jsx';
 
 const App = () => {
   return (
-    <div className='container'>
-      <Header/>
-      <div className="container-view">Some activities should be here</div>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/archived" element={<Archived />} />
+        </Routes>
+      </BrowserRouter>
   );
 };
 
