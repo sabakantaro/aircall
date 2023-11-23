@@ -1,12 +1,13 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import { Link } from 'react-router-dom';
 
 const CallCard = ({ call }) => (
   <div key={call.id}>
     <p className='text-center text-base font-semibold text-gray-300 font-mono my-2'>
       {dayjs(call.created_at).format('MMM, DD YYYY')}
     </p>
-    <div className='flex justify-between items-center border-2 border-gray-100 rounded-lg px-4 py-2 bg-white'>
+    <Link to={`/call/${call.id}`} className='flex justify-between items-center border-2 border-gray-100 rounded-lg px-4 py-2 bg-white'>
       <div className='flex flex-row items-center justify-center'>
         <div className='relative w-6 h-6 rounded-full'>
           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" className='fill-red-400 absolute -top-[1px] right-[2px]'>
@@ -29,7 +30,7 @@ const CallCard = ({ call }) => (
       <p className='text-center text-xs font-semibold text-gray-300'>
         {dayjs(call.created_at).format('hh:mm A')}
       </p>
-    </div>
+    </Link>
   </div>
 );
 
