@@ -33,4 +33,10 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+  output: {
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
 };
