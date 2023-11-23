@@ -1,7 +1,5 @@
 import React from 'react';
 import NavigationLink from './NavigationLink.jsx'
-import SVGIcon from './SVGIcon.jsx'
-
 
 const navLinks = [
   {
@@ -18,9 +16,15 @@ const navLinks = [
   },
 ];
 
+const SVGIcon = ({ path, label, height }) => (
+  <svg role="img" aria-label={label} xmlns="http://www.w3.org/2000/svg" height={height} viewBox="0 0 512 512">
+    <path d={path} />
+  </svg>
+);
+
 const BottomNav = () => {
   return (
-    <nav className='absolute bottom-0 left-0 right-0 mx-auto h-16 w-full border-t border-gray-300 grid grid-cols-2'>
+    <nav className='sticky bottom-0 left-0 right-0 mx-auto h-16 w-full border-t border-gray-300 grid grid-cols-2 bg-white'>
       {navLinks.map((link, index) => (
         <NavigationLink key={index} linkUrl={link.linkUrl}>
           <SVGIcon path={link.iconPath} label={link.label} height={link.height} />

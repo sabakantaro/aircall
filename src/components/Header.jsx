@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className='flex justify-center items-center h-20'>
+    <header className='sticky top-0 flex justify-center items-center h-20 bg-white z-10'>
       <svg viewBox='0 0 486 168' version='1.1' xmlns='http://www.w3.org/2000/svg' className='h-29 w-29'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g transform='translate(207.000000, 24.000000)'>
