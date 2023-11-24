@@ -18,7 +18,7 @@ const CallCard = ({ call }) => (
           </svg>
         </div>
         <div className='flex flex-col items-start justify-center'>
-          <h2 className='text-left text-lg text-gray-500 font-semibold ml-3'>
+          <h2 className={`text-left text-lg font-semibold ml-3 ${call.call_type === 'missed' ? 'text-red-400' : 'text-gray-500'}`}>
             {call.from ? `+${call.from.toString().split('').slice(0, 2).join('')} ${call.from.toString().split('').slice(2, 3).join('')} ${call.from.toString().split('').slice(3, 5).join('')} ${call.from.toString().split('').slice(5, 7).join('')} ${call.from.toString().split('').slice(7, 9).join('')}` : 'Unknown'}
           </h2>
           <p className='text-center text-sm text-gray-400 line-clamp-1 ml-3'>
