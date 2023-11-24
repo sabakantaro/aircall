@@ -6,7 +6,7 @@ const NavigationLink = ({ children, linkUrl }) => {
     <NavLink
       to={linkUrl}
       className={({ isActive }) =>
-        `border-b-4 mx-16 ${isActive ? "border-[#2AC420]" : "border-white"} flex items-center justify-center text-center`
+        `border-b-4 ${isActive ? "border-[#2AC420]" : "border-white"} flex items-center justify-center`
       }
     >
       {children}
