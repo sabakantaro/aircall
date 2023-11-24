@@ -1,66 +1,43 @@
-## Summary
+# Air Call
+## Description
+This is a simple call list app that allows you to check calls and archive them. It is built with React and deployed with Vercel.
 
-The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but please change whatever you want (CSS files, HTML structure, JS structure, etc).
+![AirCallDemo](https://github.com/sabakantaro/sabakantaro/assets/79243411/cfc8250d-6649-4353-a51a-7aab57999dd7)
 
-The app will have the following features:
-- **Activity Feed** - simple list of calls
-- **Activity Detail** - detail of a call
-- **Archive** - the final user should be able to archive (and unarchive) a call. Archived calls will no longer be displayed on the Activity Feed and should have a separate Archived Tab.
+link: [https://aircall-sabakantaro.vercel.app/](https://aircall-sabakantaro.vercel.app/)
+
+## Highlights
+
+- Intuitive UI: The UI is designed to be intuitive and easy to use. The user can archive and unarchive calls with a single click.
+- Best practices: The app is built with reusable components and follows best practices. Created custom hooks like `useFetchCalls` to handle API calls and state management.
+- Code readability: The code is well organized and easy to read. All the components are in the `components` folder and the hooks are in the `hooks` folder, and the `pages` folder contains the pages.
+
+## Additional points
+- Used Kanban board to manage the project
+<img width="1440" alt="GithubKanbanboard" src="https://github.com/sabakantaro/sabakantaro/assets/79243411/37dce5c4-7021-46e4-abe6-df22dfa9eff4">
+
+- Created issues and pull requests to manage the project
+<img width="1439" alt="githubIssues" src="https://github.com/sabakantaro/sabakantaro/assets/79243411/70d0435b-3ab9-4a21-bcff-ec5c4d8abbc3">
+
+## Tech stacks
+- React
+- React Router
+- React Hooks
+- Webpack
+- Babel
+- Tailwind CSS
+- Vercel
+
+## Features
+
+- Activity Feed - simple list of calls
+- Activity Detail - detail of a call
+- Archive - the final user should be able to archive (and unarchive) a call.
+- Archived calls will no longer be displayed on the Activity Feed and should have a separate Archived Tab.
 - A button to archive all calls in the activity feed
 - A button to unarchive all calls in the archived calls tab
 
-Show us what you can do in 48 hours. You will be assessed on the following parameters: 
-- Focus on design (Pay attention to the UI/UX and transitions)
-- Best React Practices
-- Code Readability and Maintainability
-
-## Submission
-After you're done with the assignment, please submit a link to the **GitHub/Bitbucket repository** (make sure it's public) with your code **AND** a deployment link where our recruiters can interact with the live version. You can use freely available tools like **Netlify, Vercel, Heroku, etc** to deploy your React application.
-
-**Note:** Submissions without a valid repository and deployment link will be removed from any further consideration.
-
-To give you an idea, here's what our app looks like:
-
-
-![app](https://user-images.githubusercontent.com/630714/29357034-763d7216-8276-11e7-8bcb-e77d9645dfcc.png)
-
-## Installation
-
-We're using [yarn](https://yarnpkg.com) here (but you can use npm):
-
-```
-yarn install
-yarn start
-```
-
-## API documentation
-
-### Routes
-
-Here is the API address: https://cerulean-marlin-wig.cyclic.app/ <br>
-If you run into a CORS error, please prepend the base URL with this CORS Anywhere server URL: https://charming-bat-singlet.cyclic.app/ <br>
-The prepended base URL will look like this https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/
-
-The API is hosted on a free server, which is why the first time you call the API, it will throw an error. The server goes to sleep if there hasn't been any activity for a while, but after 30-60 seconds of the first call, it should work as expected. Please reach out to us in case it doesn't.
-
-- **GET** - BASE_URL/activities: get calls to display in the Activity Feed
-- **GET** - BASE_URL/activities/<call_id> retrieve a specific call details
-- **PATCH** - BASE_URL/activities/<call_id> update a call. The only field updatable is `is_archived (bool)`. You'll need to send a JSON in the request body:
-```
-{
-  is_archived: true
-}
-```
-- **PATCH** - BASE_URL/reset: Reset all calls to initial state (usefull if you archived all calls).
-
-### Call object
-
-- **id** - unique ID of call
-- **created_at** - creation date
-- **direction** - `inbound` or `outbound` call
-- **from** - caller's number
-- **to** - callee's number
-- **via** - Aircall number used for the call
-- **duration** - duration of a call (in seconds)
-- **is_archived** - call is archived or not
-- **call_type** - can be a `missed`, `answered` or `voicemail` call.
+## Future improvements
+- Change CDN to install packages about Tailwind CSS: Currently, Tailwind CSS is installed with CDN in order to meet the deadline. However, it is better to install it with npm or yarn.
+- Remove .env file from the repository: Currently, the .env file is included in the repository to solve the problem on Vercel deployment. However, it is better to remove it from the repository and use the environment variables on Vercel.
+- Add tests: Currently, there are no tests. It is better to add tests to make sure the app works as expected.
